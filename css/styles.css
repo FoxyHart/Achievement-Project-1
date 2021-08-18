@@ -1,0 +1,282 @@
+/* font color: #e79f46
+background color: black
+title color: #660066
+*/
+/*
+font-color: #77ab59
+title-color: #234d20
+link-color: #d2aaf4
+background-color:	#f0f7da;
+background-image: url(../img/monstera.jpg)
+logo: url
+*/
+
+:root {
+  --primary-color: #49796b;
+  --secondary-color: #234d20;
+  --tertiary-color: #77ab59;
+  --quaternary-color: #660066;
+  --quinary-color: #edc655;
+  --senary-color: #fcffad;
+  --septenary-color: #f76414;
+  --font-size: 36px;
+  --padding: 30px;
+  --margin: 30px;
+  --border: 10px; 
+  --text-align: center;
+  --flex-direction: column;
+}
+* {
+  box-sizing: border-box;
+}
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+.page-header__item {
+  flex: 2 3 500px;
+}
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+h1 {
+  color: var(--secondary-color);
+  font-size: var(--font-size);
+  float: left;
+}
+h3 {
+  color: var(--secondary-color);
+  font-size: var(--font-size);
+  flex-direction: var(--flex-direction);
+  text-align: var(--text-align);
+}
+.profile__portrait {
+  float: left;
+  width: 190px;
+  height: auto;
+  margin-right: 40px;
+  border-radius: 20%;
+}
+body {
+  background-image: url(../img/monstera.jpg);
+  background-color:	#f0f7da;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Lora', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--primary-color);
+  padding: var(--padding);
+  margin: var(--margin);
+  border: var(--border);
+  flex-direction: var(--flex-direction);
+  text-align: var(--text-align);
+}
+table {
+  flex-direction: var(--flex-direction);
+  text-align: var(--text-align);
+  margin-left: auto;
+  margin-right: auto;
+}
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+h2 {
+  color: var(--secondary-color);
+}
+.page-footer {
+  clear: both;
+}
+a {
+  color: #357b70;
+}
+svg {
+  width: 600px;
+  height: 500px;
+}
+section {
+  flex-direction: var(--flex-direction);
+  text-align: var(--text-align);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--padding);
+  margin: var(--margin);
+  border: var(--border);
+}
+a:hover {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+a:visited {
+  /* visited link */
+  color: var(--tertiary-color);
+}
+
+a:active {
+  /* selected link */
+  color: var(--secondary-color);
+}
+
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--secondary-color);
+  color:  var(--tertiary-color);
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  max-width: 175px;
+  max-height: 30px;
+  flex-direction: var(--flex-direction);
+  text-align: var(--text-align);
+  transition-duration: 0.2s;
+}
+button:hover, button:focus {
+  cursor: pointer;
+  color: var(--secondary-color);
+  background-color: var(--tertiary-color);
+}
+.button__secondary {
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+  max-width: 175px;
+  max-height: 30px;
+  flex-direction: var(--flex-direction);
+  text-align: var(--text-align);
+  transition-duration: 0.2s;
+}
+.button__secondary:hover, .button__secondary:focus {
+  cursor: pointer;
+  color: var(--tertiary-color);
+  background-color: var(--secondary-color);
+}
+.button {
+  background-color: var(--secondary-color);
+  color:  var(--tertiary-color);
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* style button */
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity;
+}
+th {
+  color: var(--primary-color);
+  font-size: 24px;
+}
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: var(--flex-direction);
+  text-align: var(--text-align);
+}
+.class {
+  background-color: var(--tertiary-color);
+  color: var(--quaternary-color);
+}
+table {
+  flex-direction: var(--flex-direction);
+  text-align: var(--text-align);
+  float: none;
+}
+.navigation-list {
+  list-style-type: none;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+/* start grid fallback */
+.projects__item {
+  display: inline-block;
+  width: 33%;
+}
+/* end grid fallback */
+@supports (display: grid) {
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    transform: translate(10px, 50px);
+    margin: 0;
+  }
+  /* start grid fallback */
+  .projects__item {
+    display: inline-block;
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
+  /* end grid fallback */
+
+}
+.projects__item {
+  background-color: hsl(70, 15%, 92%);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20x;
+}
+@media all and (max-width: 500px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .projects{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .projects {
+    grid-gap: 10px;
+  }
+  .projects__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+@keyframes color-change {
+  0% {
+    fill: var(--senary-color);
+  }
+  50% {
+    fill: var(--quinary-color);
+  }
+  100% {
+    fill: var(--septenary-color);
+  }
+}
+#fire {
+  animation: 4s color-change infinite alternate linear;
+}
+#main-lantern, #lantern-left, #lantern-right {
+  animation: 15s floating alternate linear;
+}
+@keyframes floating {
+    from {
+      transform:translate(0, 0px);
+    }
+    to { 
+      transform:translate(0, -200px);
+    }
+        
+}
+
+
