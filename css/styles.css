@@ -80,6 +80,8 @@ table {
   text-align: var(--text-align);
   margin-left: auto;
   margin-right: auto;
+  padding: var(--padding);
+  border: var(--border);
 }
 .profile {
   max-width: 700px;
@@ -108,21 +110,17 @@ section {
   border: var(--border);
 }
 a:hover {
-  /* No underlining when hovering over a link */
   text-decoration: none;
 }
 a:visited {
-  /* visited link */
   color: var(--tertiary-color);
 }
 
 a:active {
-  /* selected link */
   color: var(--secondary-color);
 }
 
 .button {
-  border: none;
   font-family: inherit;
   background-color: var(--secondary-color);
   color:  var(--tertiary-color);
