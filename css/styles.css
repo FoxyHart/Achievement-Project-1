@@ -83,6 +83,27 @@ table {
   padding: var(--padding);
   border: var(--border);
 }
+label {
+  font-size: 22px;
+  color: var(--secondary-color);
+}
+.container{
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+.wrapper {
+ box-shadow: 0 0 20px 0 rgba(35,77,32,0.7);
+ background-color: var(--senary-color);
+}
+.wrapper > *{
+  padding: var(--padding);
+}
+.contact {
+  background-color: #f6f7d6;
+  text-align: var(--text-align);
+}
 .profile {
   max-width: 700px;
   margin: 0 auto;
