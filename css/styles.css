@@ -95,14 +95,16 @@ label {
 }
 .wrapper {
  box-shadow: 0 0 20px 0 rgba(35,77,32,0.7);
- background-color: var(--senary-color);
+ background-color: #f1f1dd;
 }
 .wrapper > *{
   padding: var(--padding);
 }
 .contact {
-  background-color: #f6f7d6;
+  background-image: url(../img/simple.jpg);
   text-align: var(--text-align);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .profile {
   max-width: 700px;
