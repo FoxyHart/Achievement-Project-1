@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 /* font color: #e79f46
 background color: black
 title color: #660066
@@ -11,18 +18,25 @@ background-image: url(../img/monstera.jpg)
 logo: url
 */
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     padding: 10px;
   }
   .page-header__item {
-    flex: 2 3 500px;
+    -webkit-box-flex: 2;
+        -ms-flex: 2 3 500px;
+            flex: 2 3 500px;
   }
   .page-header__item:last-child {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     text-align: right;
   }
   h1 {
@@ -33,7 +47,10 @@ logo: url
   h3 {
     color: #234d20;
     font-size: 36px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
   }
   .profile__portrait {
@@ -56,16 +73,44 @@ logo: url
     padding: 30px;
     margin: 30px;
     border: 10px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
   }
   table {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     padding: 30px;
     border: 10px;
+  }
+  label {
+    font-size: 22px;
+    color: #234d20;
+  }
+  .container{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+  .wrapper {
+   -webkit-box-shadow: 0 0 20px 0 rgba(35,77,32,0.7);
+           box-shadow: 0 0 20px 0 rgba(35,77,32,0.7);
+   background-color: #f6f7d6;
+  }
+  .wrapper > *{
+    padding: 30px;
+  }
+  .contact {
+    background-color: #aee0aa  ;
+    text-align: center;
   }
   .profile {
     max-width: 700px;
@@ -85,7 +130,10 @@ logo: url
     height: 500px;
   }
   section {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -105,7 +153,6 @@ logo: url
   }
   
   .button {
-    border: none;
     font-family: inherit;
     background-color: #234d20;
     color:  #77ab59;
@@ -115,9 +162,14 @@ logo: url
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     max-width: 175px;
     max-height: 30px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
-    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
   }
   .button:hover {
     cursor: pointer;
@@ -134,9 +186,14 @@ logo: url
     color: #234d20;
     max-width: 175px;
     max-height: 30px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
-    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
   }
   .button__secondary:hover {
     cursor: pointer;
@@ -154,8 +211,13 @@ logo: url
   }
   .page-footer {
     clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
   }
   .class {
@@ -163,7 +225,10 @@ logo: url
     color: #660066;
   }
   table {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     float: none;
   }
@@ -182,10 +247,14 @@ logo: url
   /* end grid fallback */
   @supports (display: grid) {
     .projects {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 20px;
-      transform: translate(10px, 50px);
+      -webkit-transform: translate(10px, 50px);
+          -ms-transform: translate(10px, 50px);
+              transform: translate(10px, 50px);
       margin: 0;
     }
     /* start grid fallback */
@@ -200,16 +269,19 @@ logo: url
   }
   .projects__item {
     background-color: hsl(70, 15%, 92%);
+    -ms-grid-columns: 1fr 20x 1fr 20x 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20x;
   }
   @media all and (max-width: 500px) {
     .projects {
+      -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
     }
   }
   @media all and (min-width: 500px) and (max-width: 750px){
     .projects{
+      -ms-grid-columns: 1fr 20px 1fr;
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -225,6 +297,17 @@ logo: url
       font-size: 22px;
     }
   }
+  @-webkit-keyframes color-change {
+    0% {
+      fill: #fcffad;
+    }
+    50% {
+      fill: #edc655;
+    }
+    100% {
+      fill: #f76414;
+    }
+  }
   @keyframes color-change {
     0% {
       fill: #fcffad;
@@ -237,20 +320,34 @@ logo: url
     }
   }
   #fire {
-    animation: 4s color-change infinite alternate linear;
+    -webkit-animation: 4s color-change infinite alternate linear;
+            animation: 4s color-change infinite alternate linear;
   }
   #main-lantern, #lantern-left, #lantern-right {
-    animation: 15s floating alternate linear;
+    -webkit-animation: 15s floating alternate linear;
+            animation: 15s floating alternate linear;
   }
-  @keyframes floating {
+  @-webkit-keyframes floating {
       from {
-        transform:translate(0, 0px);
+        -webkit-transform:translate(0, 0px);
+                transform:translate(0, 0px);
       }
       to { 
-        transform:translate(0, -200px);
+        -webkit-transform:translate(0, -200px); 
+                transform:translate(0, -200px);
       }
           
   }
-  
+  @keyframes floating {
+      from {
+        -webkit-transform:translate(0, 0px);
+                transform:translate(0, 0px);
+      }
+      to { 
+        -webkit-transform:translate(0, -200px); 
+                transform:translate(0, -200px);
+      }
+          
+  }
   
   
