@@ -5,17 +5,14 @@
 * Browsers: last 2 version
 */
 
-/* font color: #e79f46
-background color: black
-title color: #660066
-*/
 /*
-font-color: #77ab59
-title-color: #234d20
-link-color: #d2aaf4
-background-color:	#f0f7da;
-background-image: url(../img/monstera.jpg)
-logo: url
+--primary-color: #49796b;
+  --secondary-color: #234d20;
+  --tertiary-color: #77ab59;
+  --quaternary-color: #660066;
+  --quinary-color: #edc655;
+  --senary-color: #fcffad;
+  --septenary-color: #f76414;
 */
 * {
     -webkit-box-sizing: border-box;
@@ -40,18 +37,19 @@ logo: url
     text-align: right;
   }
   h1 {
-    color: #234d20;
+    color: #800080;
     font-size: 36px;
     float: left;
   }
   h3 {
-    color: #234d20;
+    color: #800080;
     font-size: 36px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+    border: 2px solid black;
   }
   .profile__portrait {
     float: left;
@@ -61,15 +59,15 @@ logo: url
     border-radius: 20%;
   }
   body {
-    background-image: url(../img/monstera.jpg);
-    background-color:	#f0f7da;
+    background-image: url(../img/simple\ flowers.jpg);
+    background-color:	#262626;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Lora', sans-serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 1;
-    color: #49796b;
+    color: #d896ff;
     padding: 30px;
     margin: 30px;
     border: 10px;
@@ -92,7 +90,7 @@ logo: url
   }
   label {
     font-size: 22px;
-    color: #234d20;
+    color: #800080;
   }
   .container{
     max-width: 800px;
@@ -101,15 +99,15 @@ logo: url
     padding: 10px;
   }
   .wrapper {
-   -webkit-box-shadow: 0 0 20px 0 rgba(35,77,32,0.7);
-           box-shadow: 0 0 20px 0 rgba(35,77,32,0.7);
-   background-color: #f1f1dd;
+   -webkit-box-shadow: 0 0 20px 0 #357b70;
+           box-shadow: 0 0 20px 0 #357b70;
+   background-color: #5a5a5a;
   }
   .wrapper > *{
     padding: 30px;
   }
   .contact {
-    background-image: url(../img/simple.jpg);
+    background-color: rgb(27, 26, 26);
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -119,7 +117,7 @@ logo: url
     margin: 0 auto;
   }
   h2 {
-    color: #234d20;
+    color: #800080;
   }
   .page-footer {
     clear: both;
@@ -147,21 +145,21 @@ logo: url
     text-decoration: none;
   }
   a:visited {
-    color: #77ab59;
+    color: #6699b3;
   }
   
   a:active {
-    color: #234d20;
+    color: #800080;
   }
   
   .button {
     font-family: inherit;
-    background-color: #234d20;
-    color:  #77ab59;
+    background-color:  #800080;
+    color:  #800080;
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #357b70;
     max-width: 175px;
     max-height: 30px;
     -webkit-box-orient: vertical;
@@ -174,17 +172,17 @@ logo: url
   }
   .button:hover {
     cursor: pointer;
-    color: #234d20;
-    background-color: #77ab59;
+    color: #800080;
+    background-color: #357b70;
   }
   .button:focus {
     cursor: pointer;
-    color: #234d20;
-    background-color: #77ab59;
+    color: #800080;
+    background-color: #357b70;
   }
   .button__secondary {
-    background-color: #77ab59;
-    color: #234d20;
+    background-color: #357b70;
+    color: #800080;
     max-width: 175px;
     max-height: 30px;
     -webkit-box-orient: vertical;
@@ -197,16 +195,16 @@ logo: url
   }
   .button__secondary:hover {
     cursor: pointer;
-    color: #77ab59;
-    background-color: #234d20;
+    color: #357b70;
+    background-color: #800080;
   }
   .button__secondary:focus {
     cursor: pointer;
-    color: #77ab59;
-    background-color: #234d20;
+    color: #357b70;
+    background-color: #800080;
   }
   th {
-    color: #49796b;
+    color: #357b70;
     font-size: 24px;
   }
   .page-footer {
@@ -220,9 +218,12 @@ logo: url
             flex-direction: column;
     text-align: center;
   }
+  .standard-label {
+    color: #efbbff
+  }
   .class {
-    background-color: #77ab59;
-    color: #660066;
+    background-color: #357b70;
+    color: #efbbff;
   }
   table {
     -webkit-box-orient: vertical;
@@ -232,6 +233,7 @@ logo: url
     text-align: center;
     float: none;
   }
+  
   .navigation-list {
     list-style-type: none;
   }
@@ -255,6 +257,7 @@ logo: url
       -webkit-transform: translate(10px, 50px);
               transform: translate(10px, 50px);
       margin: 0;
+      border-radius: 3px;
     }
     /* start grid fallback */
     .projects__item {
@@ -262,15 +265,19 @@ logo: url
       width: auto;
       min-height: auto;
       margin: 0;
+      border-radius: 3px;
+      border: 2px solid black;
     }
     /* end grid fallback */
   
   }
   .projects__item {
-    background-color: hsl(70, 15%, 92%);
+    background-color: #262626;
     -ms-grid-columns: 1fr 20x 1fr 20x 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20x;
+    border-radius: 3px;
+    border: 2px solid black;
   }
   @media all and (max-width: 500px) {
     .projects {
