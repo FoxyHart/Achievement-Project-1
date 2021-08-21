@@ -330,8 +330,8 @@
             animation: 4s color-change infinite alternate linear;
   }
   #main-lantern, #lantern-left, #lantern-right {
-    -webkit-animation: 15s floating alternate linear;
-            animation: 15s floating alternate linear;
+    -webkit-animation: 15s floating infinite alternate linear;
+            animation: 15s floating infinite alternate linear;
   }
   @-webkit-keyframes floating {
       from {

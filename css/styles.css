@@ -275,7 +275,7 @@ table {
   animation: 4s color-change infinite alternate linear;
 }
 #main-lantern, #lantern-left, #lantern-right {
-  animation: 15s floating alternate linear;
+  animation: 15s floating infinite alternate linear;
 }
 @keyframes floating {
     from {
