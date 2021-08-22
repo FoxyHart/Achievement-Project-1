@@ -135,13 +135,13 @@ a:visited {
 }
 
 a:active {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .button {
   font-family: inherit;
   background-color:  var(--secondary-color);
-  color:  #6699b3;
+  color:  #6699b3, white;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
