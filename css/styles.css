@@ -114,9 +114,6 @@ h2 {
 .page-footer {
   clear: both;
 }
-a {
-  color: #357b70;
-}
 svg {
   width: 600px;
   height: 500px;
@@ -144,7 +141,7 @@ a:active {
 .button {
   font-family: inherit;
   background-color:  var(--secondary-color);
-  color:  var(--secondary-color);
+  color:  #6699b3;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -177,6 +174,9 @@ a:active {
 th {
   color: var(--tertiary-color);
   font-size: 24px;
+}
+a {
+  color: #357b70;
 }
 .page-footer {
   clear: both;
