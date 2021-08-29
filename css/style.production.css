@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 2 version
+*/
+
+/*
 --primary-color: #49796b;
   --secondary-color: #234d20;
   --tertiary-color: #77ab59;
@@ -8,18 +15,25 @@
   --septenary-color: #f76414;
 */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 10px;
 }
 .page-header__item {
-  flex: 2 3 500px;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 3 500px;
+          flex: 2 3 500px;
 }
 .page-header__item:last-child {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
 }
 h1 {
@@ -30,7 +44,10 @@ h1 {
 h3 {
   color: #800080;
   font-size: 36px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   border: 2px solid black;
   border-radius: 10px;
@@ -56,11 +73,17 @@ body {
   padding: 30px;
   margin: 30px;
   border: 10px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 table {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -78,7 +101,8 @@ label {
   padding: 10px;
 }
 .wrapper {
- box-shadow: 0 0 20px 0 #357b70;
+ -webkit-box-shadow: 0 0 20px 0 #357b70;
+         box-shadow: 0 0 20px 0 #357b70;
  background-color: #5a5a5a;
 }
 .wrapper > *{
@@ -105,7 +129,10 @@ svg {
   height: 500px;
 }
 section {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -113,7 +140,8 @@ section {
   margin: 30px;
   border: 10px;
   border-bottom: 20px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 a:hover {
   text-decoration: none;
@@ -122,9 +150,8 @@ a:visited {
   color: #6699b3;
 }
 a:active {
-  color: #d896ff;
+  color: #800080;
   font-weight: bold;
-  background-color: #efbbff;
 }
 .button {
   font-family: inherit;
@@ -136,9 +163,13 @@ a:active {
   border-bottom: 2px solid #357b70;
   max-width: 175px;
   max-height: 30px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 .button:hover {
   cursor: pointer;
@@ -155,9 +186,13 @@ a:active {
   color: #800080;
   max-width: 175px;
   max-height: 30px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 .button__secondary:hover {
   cursor: pointer;
@@ -178,8 +213,13 @@ a {
 }
 .page-footer {
   clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 .standard-label {
@@ -190,7 +230,10 @@ a {
   color: #efbbff;
 }
 table {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   float: none;
 }
@@ -210,10 +253,13 @@ table {
 /* end grid fallback */
 @supports (display: grid) {
   .projects {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
-    transform: translate(10px, 50px);
+    -webkit-transform: translate(10px, 50px);
+            transform: translate(10px, 50px);
     margin: 10;
     border-radius: 10px;
   }
@@ -231,6 +277,7 @@ table {
 }
 .projects__item {
   background-color: #262626;
+  -ms-grid-columns: 1fr 20x 1fr 20x 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20x;
   border-radius: 10px;
@@ -238,11 +285,14 @@ table {
 }
 @media all and (max-width: 500px) {
   .projects {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
   .section {
     width: 100%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: none;
   }
   .profile__portrait {
@@ -255,7 +305,9 @@ table {
   }
   .h3 {
     width: 100%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: none;
   }
   svg {
@@ -265,11 +317,14 @@ table {
 }
 @media all and (min-width: 500px) and (max-width: 750px){
   .projects{
+    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
   .section {
     width: 100%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: none;
   }
   .profile__portrait {
@@ -282,7 +337,9 @@ table {
   }
   .h3 {
     width: 100%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: none;
   }
   svg {
@@ -302,6 +359,17 @@ table {
     font-size: 22px;
   }
 }
+@-webkit-keyframes color-change {
+  0% {
+    fill: #fcffad;
+  }
+  50% {
+    fill: #edc655;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
 @keyframes color-change {
   0% {
     fill: #fcffad;
@@ -314,19 +382,33 @@ table {
   }
 }
 #fire {
-  animation: 4s color-change infinite alternate linear;
+  -webkit-animation: 4s color-change infinite alternate linear;
+          animation: 4s color-change infinite alternate linear;
 }
 #main-lantern, #lantern-left, #lantern-right {
-  animation: 15s floating infinite alternate linear;
+  -webkit-animation: 15s floating infinite alternate linear;
+          animation: 15s floating infinite alternate linear;
 }
-@keyframes floating {
+@-webkit-keyframes floating {
     from {
-      transform:translate(0, 0px);
+      -webkit-transform:translate(0, 0px);
+              transform:translate(0, 0px);
     }
     to { 
-      transform:translate(0, -200px);
+      -webkit-transform:translate(0, -200px); 
+              transform:translate(0, -200px);
     }
         
 }
-
+@keyframes floating {
+    from {
+      -webkit-transform:translate(0, 0px);
+              transform:translate(0, 0px);
+    }
+    to { 
+      -webkit-transform:translate(0, -200px); 
+              transform:translate(0, -200px);
+    }
+        
+}
 
