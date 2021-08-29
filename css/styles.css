@@ -49,6 +49,7 @@ h3 {
   flex-direction: var(--flex-direction);
   text-align: var(--text-align);
   border: 2px solid black;
+  border-radius: 10px;
 }
 .profile__portrait {
   float: left;
@@ -136,15 +137,10 @@ a:hover {
 a:visited {
   color: #6699b3;
 }
-
 a:active {
   color: var(--primary-color);
   font-weight: bold;
   background-color: var(--quaternary-color);
-}
-#home, #about, #work, #contact {
-  font-weight: bold;
-  color: var(--secondary-color)
 }
 .button {
   font-family: inherit;
@@ -224,16 +220,16 @@ table {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     transform: translate(10px, 50px);
-    margin: 0;
-    border-radius: 3px;
+    margin: 10;
+    border-radius: 10px;
   }
   /* start grid fallback */
   .projects__item {
     display: inline-block;
     width: auto;
     min-height: auto;
-    margin: 0;
-    border-radius: 3px;
+    margin: 10;
+    border-radius: 10px;
     border: 2px solid black;
   }
   /* end grid fallback */
@@ -243,7 +239,7 @@ table {
   background-color: #262626;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20x;
-  border-radius: 3px;
+  border-radius: 10px;
   border: 2px solid black;
 }
 @media all and (max-width: 500px) {
@@ -263,11 +259,42 @@ table {
     font-size: 12px;
     width: 100%;
   }
+  .h3 {
+    width: 100%;
+    justify-content: center;
+    margin: none;
+  }
+  svg {
+    width: 300px;
+    height: 400px;
+  } 
 }
 @media all and (min-width: 500px) and (max-width: 750px){
   .projects{
     grid-template-columns: 1fr 1fr;
   }
+  .section {
+    width: 100%;
+    justify-content: center;
+    margin: none;
+  }
+  .profile__portrait {
+    float: none;
+    margin-right: none;
+  }
+  .a {
+    font-size: 12px;
+    width: 100%;
+  }
+  .h3 {
+    width: 100%;
+    justify-content: center;
+    margin: none;
+  }
+  svg {
+    width: 300px;
+    height: 400px;
+  } 
 }
 @media all and (max-width: 750px) {
   .projects {
