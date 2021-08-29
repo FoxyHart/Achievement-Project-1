@@ -139,8 +139,6 @@ a:visited {
 }
 a:active {
   color: var(--primary-color);
-  font-weight: bold;
-  background-color: var(--quaternary-color);
 }
 .button {
   font-family: inherit;
@@ -200,7 +198,6 @@ table {
   text-align: var(--text-align);
   float: none;
 }
-
 .navigation-list {
   list-style-type: none;
 }
