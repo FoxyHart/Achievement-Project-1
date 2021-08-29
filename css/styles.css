@@ -127,6 +127,8 @@ section {
   padding: var(--padding);
   margin: var(--margin);
   border: var(--border);
+  border-bottom: 20px;
+  box-sizing: border-box;
 }
 a:hover {
   text-decoration: none;
@@ -140,7 +142,10 @@ a:active {
   font-weight: bold;
   background-color: var(--quaternary-color);
 }
-
+#home, #about, #work, #contact {
+  font-weight: bold;
+  color: var(--secondary-color)
+}
 .button {
   font-family: inherit;
   background-color:  var(--secondary-color);
@@ -244,6 +249,19 @@ table {
 @media all and (max-width: 500px) {
   .projects {
     grid-template-columns: 1fr;
+  }
+  .section {
+    width: 100%;
+    justify-content: center;
+    margin: none;
+  }
+  .profile__portrait {
+    float: none;
+    margin-right: none;
+  }
+  .a {
+    font-size: 12px;
+    width: 100%;
   }
 }
 @media all and (min-width: 500px) and (max-width: 750px){
