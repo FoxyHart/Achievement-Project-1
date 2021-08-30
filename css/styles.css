@@ -271,7 +271,7 @@ table {
     width: 300px;
     height: 400px;
   } 
-  .wrapper {
+  .wrapper > *{
    padding: 0;
    font-size: 14px;
   }
@@ -301,7 +301,7 @@ table {
     width: 300px;
     height: 400px;
   } 
-  .wrapper {
+  .wrapper > *{
     padding: 0;
     font-size: 14px;
    }
