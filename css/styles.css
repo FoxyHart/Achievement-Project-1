@@ -106,6 +106,11 @@ label {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
 .profile {
   max-width: 700px;
   margin: 0 auto;
