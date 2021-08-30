@@ -256,8 +256,7 @@ table {
     margin: none;
   }
   .profile__portrait {
-    float: none;
-    margin-right: none;
+    margin-right: 0;
   }
   .a {
     font-size: 12px;
@@ -272,6 +271,10 @@ table {
     width: 300px;
     height: 400px;
   } 
+  .wrapper {
+   padding: 0;
+   font-size: 14px;
+  }
 }
 @media all and (min-width: 500px) and (max-width: 750px){
   .projects{
@@ -283,8 +286,7 @@ table {
     margin: none;
   }
   .profile__portrait {
-    float: none;
-    margin-right: none;
+    margin-right: 0;
   }
   .a {
     font-size: 12px;
@@ -299,6 +301,10 @@ table {
     width: 300px;
     height: 400px;
   } 
+  .wrapper {
+    padding: 0;
+    font-size: 14px;
+   }
 }
 @media all and (max-width: 750px) {
   .projects {
