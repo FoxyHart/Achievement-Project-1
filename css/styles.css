@@ -11,7 +11,7 @@
 :root {
   --primary-color: #d896ff;
   --secondary-color: #800080;
-  --tertiary-color: #357b70;
+  --tertiary-color: #d3a625;
   --quaternary-color: #efbbff;
   --quinary-color: #edc655;
   --senary-color: #fcffad;
@@ -94,7 +94,7 @@ label {
   padding: 10px;
 }
 .wrapper {
- box-shadow: 0 0 20px 0 #357b70;
+ box-shadow: 0 0 20px 0 var(--tertiary-color);
  background-color: #5a5a5a;
 }
 .wrapper > *{
@@ -140,7 +140,7 @@ a:hover {
   text-decoration: none;
 }
 a:visited {
-  color: #6699b3;
+  color: #b48811;
 }
 a:active {
   color: var(--secondary-color);
@@ -149,11 +149,11 @@ a:active {
 .button {
   font-family: inherit;
   background-color:  var(--secondary-color);
-  color:  #6699b3, white;
+  color:  #b48811, white;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid #357b70;
+  border-bottom: 2px solid var(--tertiary-color);
   max-width: 175px;
   max-height: 30px;
   flex-direction: var(--flex-direction);
@@ -184,7 +184,7 @@ th {
   font-size: 24px;
 }
 a {
-  color: #357b70;
+  color: var(--tertiary-color);
 }
 .page-footer {
   clear: both;
